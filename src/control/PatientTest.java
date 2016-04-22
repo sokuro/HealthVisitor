@@ -13,6 +13,9 @@ public class PatientTest {
 
         HandlePatient patient = new HandlePatient();
         patient.addPatient(1, "Ugorcak", "Karol", "Rosenweg 21", "Bern", 1981, "calm");
-        System.out.println(patient.getElements());
+//        System.out.println(patient.getElements());
+        System.out.println(patient.getPatient());
+        patient.addPatient(2, "Nacht", "Rebeca", "Rosenweg 21", "Bern", 1992, "calm");
+        System.out.println(patient.getPatient());
     }
 }

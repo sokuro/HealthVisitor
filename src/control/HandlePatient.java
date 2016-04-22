@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class HandlePatient {
 
-    ArrayList<Person> patientList = new ArrayList<Person>();
+    ArrayList<Patient> patientList = new ArrayList<Patient>();
 
     // add new patient into the patient list
     public void addPatient(int aNumber, String aName, String aFirstName, String aStreet, String aCity,
@@ -19,10 +19,25 @@ public class HandlePatient {
         patientList.add(patient);
     }
 
+    // get values
+    public String getPatient(){
+        String str = "";
+        for (int i=0;i<patientList.size();i++) {
+            str += this.patientList.get(i).getPatientNumber() + " | ";
+            str += this.patientList.get(i).getName() + " | ";
+            str += this.patientList.get(i).getFirstName() + " | ";
+            str += this.patientList.get(i).getStreet() + " | ";
+            str += this.patientList.get(i).getCity() + " | ";
+            str += this.patientList.get(i).getBirthyear() + " | ";
+            str += this.patientList.get(i).getSecurityValue() + "\n";
+        }
+        return str;
+    }
+
     public String getElements(){
         String str = "";
 //        for (int i: patientList) str += patientList.get(i);
-        for (int i=0;i<patientList.size();i++) str += patientList.get(i) + "";
+        for (int i=0;i<patientList.size();i++) str += this.patientList.get(i).toString() + " ";
         return str;
     }
 }

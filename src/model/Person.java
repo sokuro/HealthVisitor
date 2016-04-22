@@ -27,10 +27,10 @@ public class Person {
         this.birthyear = aBirthYear;
     }
 
-    private String getName(){
+    public String getName(){
         return name;
     }
-    private void setName(String aName){
+    public void setName(String aName){
         this.name = aName;
     }
 
